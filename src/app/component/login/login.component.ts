@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
     ({
       name: new FormControl('',Validators.required),
       email: new FormControl('',[Validators.required,
-        Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$')]),
+        Validators.pattern('[a-zA-Z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$')]),
       city: new FormControl('',Validators.required),
-      phonenumber: new FormControl('',[Validators.required])
+      phonenumber: new FormControl('',[Validators.required,Validators.pattern("^[0-9]{10}$")])
     })
   }
 

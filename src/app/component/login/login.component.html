@@ -41,6 +41,9 @@
           <div class="text-danger" *ngIf="submitted && myForm['phonenumber'].errors?.['required']">
             Enter your phone number.
           </div>
+          <div class="text-danger" *ngIf="submitted && myForm['phonenumber'].errors?.['pattern']">
+            Please enter 10 Digit Phone Number
+          </div>
 
           <!-- Submit button -->
           <button class="btn btn-primary btn-block" type="submit">
